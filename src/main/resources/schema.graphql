@@ -4,8 +4,21 @@ type Link {
   description: String!
 }
 
+type Post {
+	id: Int!
+	title: String!
+	description: String!
+}
+
+type User {
+	id: Int!
+	name: String!
+	posts: [Post!]!
+}
+
 type Query {
-  allLinks: [Link]
+	allLinks: [Link!]!
+  	users: [User!]!
 }
 
 schema {
